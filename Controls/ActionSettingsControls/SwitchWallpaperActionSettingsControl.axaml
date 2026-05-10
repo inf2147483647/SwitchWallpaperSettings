@@ -1,0 +1,35 @@
+﻿<ci:ActionSettingsControlBase 
+    x:Class="SwitchWallpaperSettings.Controls.ActionSettingsControls.SwitchWallpaperActionSettingsControl"
+    x:TypeArguments="models:WallpaperSettings"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ci="http://classisland.tech/schemas/xaml/core"
+    xmlns:models="clr-namespace:SwitchWallpaperSettings.Models;assembly=SwitchWallpaperSettings"
+    xmlns:local="clr-namespace:SwitchWallpaperSettings.Controls.ActionSettingsControls;assembly=SwitchWallpaperSettings"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance Type=local:SwitchWallpaperActionSettingsControl}">
+    <StackPanel Spacing="8">
+        <TextBlock Text="选择壁纸文件:" Margin="0 0 0 4" />
+        <!-- 新增：水平布局，将输入框和选择按钮放在同一行 -->
+        <StackPanel Orientation="Horizontal" Spacing="8">
+            <TextBox 
+                Text="{Binding Settings.WallpaperPath, Mode=TwoWay}"
+                Watermark="请输入壁纸文件的完整路径"
+                MinWidth="300" />
+            <Button Content="选择文件" Click="OnSelectFileClick" />
+        </StackPanel>
+            
+        <TextBlock Text="选择壁纸契合度:" Margin="0 16 0 4" />
+        <ComboBox 
+            SelectedIndex="{Binding Settings.FitStyle, Mode=TwoWay}">
+            <ComboBoxItem Content="平铺" />
+            <ComboBoxItem Content="居中" />
+            <ComboBoxItem Content="拉伸" />
+            <ComboBoxItem Content="适应（不对，是填充）" />
+            <ComboBoxItem Content="填充（不对，是适应）" />
+            <ComboBoxItem Content="跨区" />
+        </ComboBox>
+    </StackPanel>
+</ci:ActionSettingsControlBase>
