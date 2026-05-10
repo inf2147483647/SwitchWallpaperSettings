@@ -7,7 +7,7 @@ id: SwitchWallpaperSettings
 name: SwitchWallpaperSettings
 description: 插件描述
 entranceAssembly: "SwitchWallpaperSettings.dll"
-url: https://example.com
-version: 0.0.0.0
+url: 
+version: 1.0.0.0
 apiVersion: 2.0.0.0
 author: inf2147483647

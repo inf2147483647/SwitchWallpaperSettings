@@ -27,8 +27,8 @@
             <ComboBoxItem Content="平铺" />
             <ComboBoxItem Content="居中" />
             <ComboBoxItem Content="拉伸" />
-            <ComboBoxItem Content="适应（不对，是填充）" />
-            <ComboBoxItem Content="填充（不对，是适应）" />
+            <ComboBoxItem Content="适应" />
+            <ComboBoxItem Content="填充" />
             <ComboBoxItem Content="跨区" />
         </ComboBox>
     </StackPanel>
